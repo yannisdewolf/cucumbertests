@@ -1,6 +1,7 @@
 package be.dewolf.customer.dao;
 
 import be.dewolf.customer.CustomerContextConfig;
+import be.dewolf.customer.SpringContextTests;
 import be.dewolf.customer.model.Customer;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,10 +21,8 @@ import static org.junit.Assert.*;
 /**
  * Created by yannis on 5/03/16.
  */
-@TestExecutionListeners( { DependencyInjectionTestExecutionListener.class })
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = CustomerContextConfig.class)
-public class CustomerRepositoryTest {
+
+public class CustomerRepositoryTest extends SpringContextTests {
 
     @Resource
     private CustomerRepository customerRepository;
